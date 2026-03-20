@@ -40,14 +40,14 @@ const stats = [
 
 export default function SocialProof() {
   return (
-    <section className="py-section bg-[#0f0f13] relative overflow-hidden">
+    <section className="py-section bg-surface-deep relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-500/[0.06] blur-[180px] pointer-events-none" />
       
       {/* Dot grid texture */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.15]"
            style={{
-             backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)',
+             backgroundImage: 'radial-gradient(circle, var(--color-dot, rgba(255,255,255,0.12)) 1px, transparent 1px)',
              backgroundSize: '40px 40px',
              maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)',
            }} />
@@ -80,8 +80,8 @@ export default function SocialProof() {
 
         {/* Marquee */}
         <div className="relative mb-20 overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0f0f13] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0f0f13] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-surface-deep to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-surface-deep to-transparent z-10 pointer-events-none" />
           <div className="flex gap-12 animate-marquee w-max">
             {[...clients, ...clients].map((name, i) => (
               <div
@@ -103,7 +103,7 @@ export default function SocialProof() {
                 <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-brand-500/0 to-transparent group-hover:via-brand-500/60 transition-all duration-500" />
                 
                 {/* Quote icon */}
-                <div className="text-4xl text-brand-500/20 font-serif mb-4">&ldquo;</div>
+                <div className="font-heading text-4xl text-brand-500/20 mb-4">&ldquo;</div>
                 
                 <p className="text-content-secondary leading-relaxed mb-6">
                   {t.quote}

@@ -33,7 +33,7 @@ const CONTENT = {
 
 export default function About() {
   return (
-    <section id="about" className="relative py-section-lg overflow-hidden bg-[#0f0f13]">
+    <section id="about" className="relative py-section-lg overflow-hidden bg-surface-primary">
       {/* Ambient glow orbs */}
       <div className="absolute top-[-30%] left-[-10%] w-[700px] h-[700px] rounded-full bg-brand-500/10 blur-[180px] pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-violet-500/8 blur-[150px] pointer-events-none" />
@@ -66,7 +66,7 @@ export default function About() {
           </AnimateIn>
           
           <AnimateIn delay={200}>
-            <p className="text-lg text-content-secondary/80 leading-relaxed max-w-2xl">
+            <p className="text-lg text-content-secondary/80 leading-relaxed max-w-2xl font-body">
               {CONTENT.description}
             </p>
           </AnimateIn>
@@ -90,7 +90,7 @@ export default function About() {
                   <h3 className="font-heading font-bold text-lg text-content-primary mb-2">
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-content-secondary/70 leading-relaxed">
+                  <p className="text-sm text-content-secondary/70 leading-relaxed font-body">
                     {pillar.desc}
                   </p>
                 </div>
@@ -111,7 +111,7 @@ export default function About() {
                   <div className="font-heading font-black text-[clamp(2rem,4vw,3rem)] text-content-primary mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-content-muted">{stat.label}</div>
+                  <div className="text-sm text-content-muted font-body">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -136,7 +136,7 @@ export default function About() {
             
             <a
               href="mailto:jiachwen99@gmail.com"
-              className="text-sm text-content-secondary hover:text-brand-400 transition-colors"
+              className="text-sm text-content-secondary hover:text-brand-400 transition-colors duration-300 font-body"
             >
               Contact us directly →
             </a>

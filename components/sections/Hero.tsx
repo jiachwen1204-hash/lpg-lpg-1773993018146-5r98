@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#0f0f13] pt-nav"
+      className="relative min-h-screen flex items-center overflow-hidden bg-surface-base pt-nav"
     >
       {/* Background gradient mesh */}
       <div className="absolute inset-0">
@@ -31,9 +31,9 @@ export default function Hero() {
       <div
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, var(--color-neutral-200) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
-          maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, var(--color-neutral-950), transparent)',
         }}
       />
 
@@ -83,14 +83,14 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-brand-500/40 blur-xl rounded-card scale-110" />
                   <a
                     href={CONTENT.cta.href}
-                    className="relative px-8 py-4 font-body font-medium bg-brand-500 text-content-inverse rounded-card hover:bg-brand-700 transition-all ease-expo-out active:scale-[0.97]"
+                    className="relative px-8 py-4 font-body font-medium bg-brand-500 text-content-inverse rounded-card hover:bg-brand-700 transition-all ease-expo-out active:scale-[0.97] cursor-pointer"
                   >
                     {CONTENT.cta.label}
                   </a>
                 </div>
                 <a
                   href={CONTENT.secondary.href}
-                  className="px-8 py-4 font-body font-medium border border-white/15 text-content-primary rounded-card hover:border-brand-500 hover:text-brand-500 transition-all ease-expo-out"
+                  className="px-8 py-4 font-body font-medium border border-white/15 text-content-primary rounded-card hover:border-brand-500 hover:text-brand-500 transition-all ease-expo-out cursor-pointer"
                 >
                   {CONTENT.secondary.label}
                 </a>
@@ -119,8 +119,8 @@ export default function Hero() {
               <div className="rounded-card-lg border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 shadow-card-lg">
                 <div className="flex items-center justify-between mb-8">
                   <span className="label-sm text-content-muted">AI Workflow Dashboard</span>
-                  <span className="text-xs text-green-400 bg-green-400/10 px-3 py-1 rounded-full flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                  <span className="text-xs text-brand-500 bg-brand-500/10 px-3 py-1 rounded-full flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
                     Active
                   </span>
                 </div>
@@ -133,7 +133,7 @@ export default function Hero() {
                       className="flex-1 rounded-sm transition-all duration-500"
                       style={{
                         height: `${h}%`,
-                        background: `linear-gradient(to top, #0EA5E9, #0369A1)`,
+                        background: `linear-gradient(to top, var(--color-brand-400), var(--color-brand-600))`,
                         opacity: i === 11 ? 1 : 0.3 + (i / 11) * 0.6,
                       }}
                     />
@@ -143,14 +143,14 @@ export default function Hero() {
                 {/* Metrics row */}
                 <div className="grid grid-cols-3 gap-4">
                   {[
-                    { label: 'Automation', value: '94%', trend: '+12%', color: 'text-brand-400' },
-                    { label: 'Analytics', value: 'Real-Time', trend: 'Live', color: 'text-green-400' },
-                    { label: 'Workflows', value: '2.4k', trend: 'Active', color: 'text-violet-400' },
+                    { label: 'Automation', value: '94%', trend: '+12%', colorClass: 'text-brand-400' },
+                    { label: 'Analytics', value: 'Real-Time', trend: 'Live', colorClass: 'text-brand-500' },
+                    { label: 'Workflows', value: '2.4k', trend: 'Active', colorClass: 'text-brand-600' },
                   ].map(m => (
                     <div key={m.label} className="rounded-card bg-white/[0.03] p-4 border border-white/5">
                       <div className="label-sm text-content-muted mb-1">{m.label}</div>
                       <div className="font-heading font-bold text-lg text-content-primary">{m.value}</div>
-                      <div className={`text-xs mt-1 ${m.color}`}>{m.trend}</div>
+                      <div className={`text-xs mt-1 ${m.colorClass}`}>{m.trend}</div>
                     </div>
                   ))}
                 </div>
@@ -163,7 +163,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-content-primary">AI Processing</div>
-                  <div className="text-xs text-green-400">98.2% Accuracy</div>
+                  <div className="text-xs text-brand-500">98.2% Accuracy</div>
                 </div>
               </div>
 

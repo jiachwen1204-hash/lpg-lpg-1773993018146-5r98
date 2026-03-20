@@ -1,3 +1,4 @@
+```tsx
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -96,7 +97,8 @@ export default function Navbar() {
             <li className="pt-2">
               <a
                 href={CTA.href}
-                className="block px-5 py-3 text-sm font-medium text-center bg-brand-500 text-content-inverse rounded-card"
+                onClick={() => setOpen(false)}
+                className="block px-5 py-3 text-sm font-medium text-center bg-brand-500 text-content-inverse rounded-card hover:bg-brand-700 hover:shadow-glow-sm transition-all"
               >
                 {CTA.label}
               </a>
@@ -107,3 +109,4 @@ export default function Navbar() {
     </header>
   )
 }
+```

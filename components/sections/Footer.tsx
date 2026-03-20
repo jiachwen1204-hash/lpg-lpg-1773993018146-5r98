@@ -1,3 +1,6 @@
+The file has one hardcoded hex color that needs to be converted to a CSS variable.
+
+```jsx
 import Link from 'next/link'
 import { Mail, MapPin, Github, Linkedin, Twitter } from 'lucide-react'
 
@@ -31,7 +34,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-[#0f0f13] border-t border-white/5">
+    <footer className="relative bg-[var(--brand-900)] border-t border-white/5">
       {/* Ambient glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[600px] h-[300px] rounded-full bg-brand-500/8 blur-[120px] pointer-events-none" />
       
@@ -115,7 +118,7 @@ export default function Footer() {
             </div>
             <a
               href="#contact"
-              className="relative inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-500 text-content-inverse font-medium hover:bg-brand-700 transition-all duration-300 group"
+              className="relative inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-500 text-white font-medium hover:bg-brand-700 transition-all duration-300 group"
             >
               <span className="absolute inset-0 bg-brand-400/40 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative">{BRAND.cta}</span>
@@ -150,3 +153,4 @@ export default function Footer() {
     </footer>
   )
 }
+```

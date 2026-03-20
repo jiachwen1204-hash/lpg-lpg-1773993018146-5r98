@@ -1,3 +1,4 @@
+```react
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import AnimateIn from '@/components/ui/AnimateIn'
@@ -40,7 +41,7 @@ function CountUp({ target, suffix, decimal }: { target: number; suffix: string; 
 
 export default function Stats() {
   return (
-    <section className="relative py-section-lg overflow-hidden bg-[#0f0f13]">
+    <section className="relative py-section-lg overflow-hidden bg-surface-base">
       {/* Background depth layers */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-500/8 blur-[180px] pointer-events-none" />
@@ -84,7 +85,7 @@ export default function Stats() {
                   <div className="font-heading font-black text-[clamp(2.5rem,5vw,4rem)] leading-[1] tracking-[-0.02em] bg-clip-text text-transparent bg-gradient-to-br from-brand-400 to-brand-500 mb-3">
                     <CountUp target={stat.value} suffix={stat.suffix} decimal={stat.decimal} />
                   </div>
-                  <div className="font-heading font-semibold text-lg text-content-primary mb-1">
+                  <div className="font-body font-semibold text-lg text-content-primary mb-1">
                     {stat.label}
                   </div>
                   <div className="text-sm text-content-muted/80">
@@ -102,3 +103,4 @@ export default function Stats() {
     </section>
   )
 }
+```

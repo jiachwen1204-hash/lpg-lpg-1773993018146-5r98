@@ -1,3 +1,4 @@
+```tsx
 import AnimateIn from '@/components/ui/AnimateIn'
 import { Cpu, BarChart3, Workflow, Globe, Zap } from 'lucide-react'
 
@@ -40,7 +41,7 @@ const SUBTEXT = 'Unify Intelligence. Accelerate Innovation. Our integrated AI so
 
 export default function Services() {
   return (
-    <section id="services" className="py-section bg-[#0f0f13] relative overflow-hidden">
+    <section id="services" className="py-section bg-surface-primary relative overflow-hidden">
       {/* Ambient glow orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-500/10 blur-[120px] pointer-events-none" />
 
@@ -68,7 +69,7 @@ export default function Services() {
           <h2 className="font-heading font-black text-display-lg text-content-primary mb-6">
             {HEADING}
           </h2>
-          <p className="max-w-2xl mx-auto text-content-secondary text-lg leading-relaxed">
+          <p className="max-w-2xl mx-auto text-content-secondary text-lg leading-relaxed font-body">
             {SUBTEXT}
           </p>
         </AnimateIn>
@@ -76,7 +77,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((svc, i) => (
             <AnimateIn key={svc.title} delay={i * 80} direction="up">
-              <div className="group relative h-full p-8 rounded-card-lg border border-white/8 bg-white/[0.03] hover:border-brand-500/40 hover:bg-white/[0.06] transition-all duration-300 ease-expo-out overflow-hidden">
+              <div className="group relative h-full p-8 rounded-card-lg border border-white/8 bg-white/[0.03] hover:border-brand-500/40 hover:bg-white/[0.06] transition-all duration-300 ease-out overflow-hidden">
                 {/* Top accent line */}
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-500/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -90,7 +91,7 @@ export default function Services() {
                   <h3 className="font-heading font-bold text-xl text-content-primary mb-3">
                     {svc.title}
                   </h3>
-                  <p className="text-content-secondary leading-relaxed">
+                  <p className="text-content-secondary leading-relaxed font-body">
                     {svc.description}
                   </p>
                 </div>
@@ -102,3 +103,4 @@ export default function Services() {
     </section>
   )
 }
+```

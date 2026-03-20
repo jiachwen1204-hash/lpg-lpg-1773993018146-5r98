@@ -11,7 +11,7 @@ const CONTENT = {
 
 export default function CTA() {
   return (
-    <section className="py-section relative overflow-hidden bg-[#0a0a14]">
+    <section className="py-section relative overflow-hidden bg-brand-950">
       {/* Background depth layers */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Primary brand glow */}
