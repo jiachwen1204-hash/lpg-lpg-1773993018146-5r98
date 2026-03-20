@@ -4,19 +4,14 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-// @lpg: Update navLinks labels and hrefs to match the company's page type.
-// For 1-Page: use anchor links (#services, #about, #contact)
-// For 5-Pages: use real routes (/about, /services, /contact, /faq)
-// IMPORTANT: Keep this static array — only change label/href values.
-// Do NOT replace with .map() on a string array or compute hrefs dynamically.
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'About',    href: '#about'    },
-  { label: 'Contact',  href: '#contact'  },
+  { label: 'Services',  href: '#services'  },
+  { label: 'Solutions', href: '#solutions' },
+  { label: 'About',    href: '#about'     },
+  { label: 'Contact',  href: '#contact'   },
 ]
 
-// @lpg: Replace with real company name and CTA
-const BRAND_NAME = 'Company Name'
+const BRAND_NAME = 'ACE'
 const CTA = { label: 'Get Started', href: '#contact' }
 
 export default function Navbar() {
@@ -41,9 +36,16 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-nav">
         <Link
           href="/"
-          className="font-heading font-bold text-xl text-content-primary hover:text-brand-500 transition-colors"
+          className="flex items-center gap-3 group"
         >
-          {BRAND_NAME}
+          <img 
+            src="https://u5ft5besqtymo1lf.public.blob.vercel-storage.com/logos/1773993015866-Customer%20List%202023-12-07%2016%2027%2058.jpg" 
+            alt="ACE logo" 
+            className="h-10 w-auto object-contain" 
+          />
+          <span className="font-heading font-bold text-xl text-content-primary group-hover:text-brand-500 transition-colors">
+            {BRAND_NAME}
+          </span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-1">
